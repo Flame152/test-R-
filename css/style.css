@@ -1,0 +1,1065 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Russo One";
+  font-display: swap;
+  src: url("../fonts/RussoOne-Regular.woff2") format("woff2"), url("../fonts/RussoOne-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  min-width: 350px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Montserrat";
+  font-size: calc(16px + 0.1041666667vw);
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Montserrat";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  font-size: calc(16px + 0.1041666667vw);
+  font-weight: 500;
+}
+
+body.lock {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 100rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+/*Ортодонтия*/
+
+/*Главный блок*/
+
+.stomatology-page .direction {
+  padding: 30px 0px 36px;
+}
+
+.stomatology-page .register-whatsapp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.direction__title {
+  margin-bottom: 50px;
+}
+
+/*Главный блок -end*/
+
+/*навигация по странице*/
+
+.nav-stomatology {
+  padding: 21px 0px;
+  background-color: #88bd6f;
+}
+
+.nav-stomatology__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 10px;
+}
+
+.nav-stomatology__item {
+  display: inline;
+}
+
+.nav-stomatology__item a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #fff;
+}
+
+/*навигация по странице - end*/
+
+/*Этапы ортодонтического лечения зубов*/
+
+.stages-stomatology {
+  padding: 68px 0px 100px;
+}
+
+.stages-stomatology__title {
+  margin-bottom: 30px;
+}
+
+.stages-stomatology__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 30px;
+}
+
+.stages-stomatology__list {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 801px;
+          flex: 0 1 801px;
+  line-height: 1.56;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.stages-stomatology__list li b {
+  font-weight: 500;
+}
+
+.stages-stomatology__list li::marker {
+  font-weight: 500;
+}
+
+.stages-stomatology__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 626px;
+          flex: 0 1 626px;
+  max-height: 469px;
+}
+
+.stages-stomatology__image img {
+  width: 100%;
+  max-height: 469px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*Этапы ортодонтического лечения зубов - end*/
+
+/*Почему стоит довериться нам?*/
+
+.trust {
+  background: #f9f9f9;
+  padding: 109px 0px 73px;
+}
+
+.trust__container {
+  max-width: 1640px;
+}
+
+.trust__title-subtitle {
+  margin-bottom: 33px;
+  padding-left: 20px;
+}
+
+.trust__title-subtitle :not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.trust__subtitle {
+  color: #9a9a9a;
+}
+
+.trust__slider {
+  padding: 20px 20px 40px;
+}
+
+.trust__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: auto;
+}
+
+.trust__card {
+  min-height: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.trust__image {
+  max-width: 100%;
+  height: 240px;
+}
+
+.trust__image img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.trust__body {
+  padding: 38px 37px 54px;
+}
+
+.trust__cuption {
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 51px;
+  font-size: calc(20px + 0.2083333333vw);
+}
+
+.trust__cuption::before {
+  content: "";
+  width: 64px;
+  height: 4px;
+  background: #88bd6f;
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+}
+
+.trust__text {
+  line-height: 1.56;
+}
+
+.carousels-line-pagination.swiper-pagination-bullets.swiper-pagination-horizontal.trust-carousel-pagination {
+  text-align: center;
+  margin: 0px auto;
+}
+
+/*Почему стоит довериться нам? - end*/
+
+/*Наши работы до/после*/
+
+.before-after {
+  padding: 170px 0px;
+}
+
+.before-after__title-subtitle {
+  margin-bottom: 53px;
+}
+
+.before-after__title-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+}
+
+.before-after a.before-after__link {
+  color: #88bd6f;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.before-after__subtitle {
+  color: #9a9a9a;
+}
+
+.before-after__slider-container {
+  position: relative;
+  max-width: 1600px;
+  padding: 0px 49px;
+}
+
+.before-after__slide {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.before-after__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 730px;
+          flex: 0 1 730px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 22px;
+}
+
+.before-after__photo {
+height: 100%;
+}
+.twentytwenty-before-label,
+.twentytwenty-after-label {
+	display: none;
+}
+
+
+.before-after__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 23px;
+     -moz-column-gap: 23px;
+          column-gap: 23px;
+}
+
+.before-after__doc-photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.before-after__doc-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.before-after__info {
+  padding-top: 28px;
+}
+
+.before-after__top {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.before-after__bottom {
+  line-height: 1.33;
+}
+
+.before-after__service span:nth-child(1) {
+  color: #9a9a9a;
+}
+
+.before-after__name span:nth-child(1) {
+  color: #9a9a9a;
+}
+
+.before-after__btn-prev,
+.before-after__btn-next {
+  position: absolute;
+  top: 32%;
+  z-index: 2;
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.before-after__pagination-btn-carousel {
+  display: none;
+}
+
+.before-after .before-after-carousel-pagination {
+  position: relative;
+  text-align: center;
+  margin: 0px auto;
+  padding-top: 42px;
+}
+
+.stomatology-page .before-after__pagination-btn-carousel.pagination-btn-carousel .pagination-btn-carousel__btn-prev-mini.before-after-btn-prev {
+  top: 22px;
+  left: 0;
+}
+
+.stomatology-page .before-after__pagination-btn-carousel.pagination-btn-carousel .pagination-btn-carousel__btn-next-mini.before-after-btn-next {
+  top: 22px;
+  right: 0;
+}
+
+/*Наши работы до/после - end*/
+
+/*Аккордеон*/
+
+.accordion-stomatology {
+  padding: 80px 0px;
+}
+
+.accordion-stomatology__container {
+  max-width: 1640px;
+}
+
+.accordion-stomatology__items {
+  padding: 20px;
+}
+
+.accordion-stomatology__item {
+  padding: 30px 30px 30px 40px;
+  border-radius: 30px;
+  -webkit-box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 0.25);
+  background: #f2f2f2;
+}
+
+.accordion-stomatology__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.accordion-stomatology__item.accordion-stomatology__item-active .accordion-stomatology__btn {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion-stomatology__item.accordion-stomatology__item-active .accordion-stomatology__title-btn {
+  padding-bottom: 30px;
+}
+
+.accordion-stomatology__title-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-stomatology__title {
+  font-weight: 600;
+  line-height: 1.25;
+  color: #333;
+  font-size: calc(20px + 0.2083333333vw);
+}
+
+.accordion-stomatology__btn {
+  width: 28px;
+  height: 28px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-stomatology__body {
+  pointer-events: none;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-stomatology__body p {
+  font-weight: 400;
+  line-height: 1.56;
+}
+
+.accordion-stomatology__body p:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+/*Аккордеон - end*/
+
+/*Стоимость услуг*/
+
+.stomatology-page .price-services__title-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 65px;
+}
+
+.stomatology-page .price-services__link-stories {
+  color: #88bd6f;
+  text-decoration-line: underline;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.stomatology-page .price-services__title {
+  margin: 0;
+}
+
+.stomatology-page .price-list__price {
+  font-weight: 600;
+}
+
+/*Стоимость услуг -end*/
+
+/*слайдеры страница стоматология*/
+
+.stocks-stomatology,
+.equipment-stomatology {
+  padding: 70px 0;
+}
+
+.stocks-stomatology__title,
+.equipment-stomatology__title-subtitle {
+  margin-left: 50px;
+  margin-bottom: 65px;
+}
+
+.equipment-stomatology__title-subtitle :not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.equipment-stomatology__subtitle {
+  color: #9a9a9a;
+}
+
+.stomatology-page .swiper-slide__caption {
+  font-size: calc(20px + 0.2083333333vw);
+}
+
+.stomatology-page .swiper-slide__text-card {
+  max-width: 638px;
+}
+
+.stomatology-page .swiper-slide__text-card p:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.stocks-stomatology__container-swiper,
+.equipment-stomatology__container-swiper {
+  position: relative;
+  max-width: 1600px;
+  padding: 0 25px 0 50px;
+}
+
+.stocks-stomatology__btn-prev,
+.stocks-stomatology__btn-next,
+.equipment-stomatology__btn-prev,
+.equipment-stomatology__btn-next {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.stocks-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.equipment-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  margin-left: 367px;
+  padding-top: 27px;
+}
+
+.stocks-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.equipment-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  max-width: 226px;
+}
+
+/*слайдеры страница стоматология - end*/
+
+/*Ортодонтия-end*/
+
+@media (max-width: 87.5em) {
+  .stomatology-page .swiper-slide__card {
+    margin-left: -390px;
+  }
+}
+
+@media (max-width: 68.75em) {
+  .before-after__slide {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .before-after__btn-prev,
+  .before-after__btn-next {
+    top: 27%;
+  }
+
+  .stomatology-page .swiper-slide__card {
+    margin: 0;
+  }
+
+  .stocks-stomatology__btn-prev,
+  .stocks-stomatology__btn-next,
+  .equipment-stomatology__btn-prev,
+  .equipment-stomatology__btn-next {
+    top: 27%;
+  }
+
+  .stocks-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+  .equipment-stomatology-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    margin: 0px auto;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 61.99875em) {
+  .nav-stomatology__list {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+
+  .stages-stomatology__row {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .stages-stomatology__list {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .stages-stomatology__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .trust {
+    padding: 80px 0px 53px;
+  }
+
+  .before-after {
+    padding: 100px 0px;
+  }
+
+  .before-after__btn-prev,
+  .before-after__btn-next {
+    top: 32%;
+  }
+
+  .accordion-stomatology__items {
+    padding: 0;
+  }
+
+  .stocks-stomatology,
+  .equipment-stomatology {
+    padding: 30px 0px;
+  }
+
+  .stocks-stomatology__title,
+  .equipment-stomatology__title-subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 61.9988em) {
+  .stomatology-page .swiper-slide__appointment {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .direction__title {
+    margin-bottom: 30px;
+  }
+
+  .stages-stomatology {
+    padding: 38px 0px 40px;
+  }
+
+  .trust {
+    padding: 40px 0px 43px;
+  }
+
+  .trust__title-subtitle {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .trust__subtitle {
+    text-align: center;
+  }
+
+  .trust__slider {
+    padding: 10px 10px 40px;
+  }
+
+  .trust__card {
+    -webkit-box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .trust__body {
+    padding: 18px 17px 24px;
+  }
+
+  .trust__cuption {
+    margin-bottom: 30px;
+  }
+
+  .trust__cuption::before {
+    bottom: -16px;
+  }
+
+  .before-after {
+    padding: 50px 0px;
+  }
+
+  .before-after__title-subtitle {
+    margin-bottom: 30px;
+  }
+
+  .before-after__title-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .before-after__subtitle {
+    text-align: center;
+  }
+
+  .before-after__slider-container {
+    padding: 0;
+  }
+
+  .before-after__buttons {
+    position: absolute;
+    width: 350px;
+    bottom: 69px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    z-index: 1;
+  }
+
+  .before-after__pagination-btn-carousel {
+    display: block;
+  }
+
+  .stomatology-page .before-after__pagination-btn-carousel.pagination-btn-carousel {
+    position: relative;
+    margin: 0px auto;
+    padding-top: 10px;
+  }
+
+  .stomatology-page .before-after__pagination-btn-carousel.pagination-btn-carousel .pagination-btn-carousel__before-after {
+    text-align: center;
+  }
+
+  .accordion-stomatology {
+    padding: 50px 0px;
+  }
+
+  .accordion-stomatology__item {
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .accordion-stomatology__item.accordion-stomatology__item-active .accordion-stomatology__title-btn {
+    padding-bottom: 20px;
+  }
+
+  .accordion-stomatology__body p {
+    line-height: 1.4;
+  }
+
+  .accordion-stomatology__body p:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .stocks-stomatology__container,
+  .equipment-stomatology__container {
+    padding: 0;
+  }
+
+  .equipment-stomatology__subtitle {
+    text-align: center;
+  }
+
+  .stocks-stomatology__slide .swiper-slide__image img,
+  .equipment-stomatology__slide .swiper-slide__image img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 47.9988em) {
+  .before-after__btn-prev,
+  .before-after__btn-next {
+    border-radius: 50%;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+  }
+
+  .before-after .before-after-carousel-pagination {
+    width: 137px !important;
+    padding-top: 70px;
+  }
+
+  .stomatology-page .price-services__title-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .stocks-stomatology__title,
+  .equipment-stomatology__title-subtitle {
+    margin-left: 0;
+  }
+
+  .stocks-stomatology__container-swiper,
+  .equipment-stomatology__container-swiper {
+    padding: 0;
+  }
+
+  .stocks-stomatology__slider,
+  .equipment-stomatology__slider {
+    padding: 0px 0px 48px;
+  }
+
+  .stocks-stomatology__btn-prev,
+  .stocks-stomatology__btn-next,
+  .equipment-stomatology__btn-prev,
+  .equipment-stomatology__btn-next {
+    background: none;
+    padding: 0;
+    border-radius: 0px;
+    top: 95px;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
+  }
+
+  .stocks-stomatology__btn-prev::before,
+  .stocks-stomatology__btn-next::before,
+  .equipment-stomatology__btn-prev::before,
+  .equipment-stomatology__btn-next::before {
+    content: "";
+    width: 58px;
+    height: 64px;
+  }
+
+  .stocks-stomatology__btn-next::before,
+  .equipment-stomatology__btn-next::before {
+    background: url(https://rplusclinic.ru/local/templates/rclinic/css/../img/sliders/next_mobile.svg) 0 0 no-repeat;
+  }
+
+  .stocks-stomatology__btn-prev::before,
+  .equipment-stomatology__btn-prev::before {
+    background: url(https://rplusclinic.ru/local/templates/rclinic/css/../img/sliders/prev_mobile.svg) 0 0 no-repeat;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  body {
+    font-size: calc(16px + 3.4 * (100vw - 390px) / 1920);
+  }
+
+  .stocks-stomatology__slide .swiper-slide__image,
+  .equipment-stomatology__slide .swiper-slide__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 29.9988em) {
+  .trust__cuption {
+    font-size: calc(20px + 4 * (100vw - 390px) / 1920);
+  }
+
+  .accordion-stomatology__title {
+    font-size: calc(20px + 4 * (100vw - 390px) / 1920);
+  }
+
+  .stomatology-page .swiper-slide__caption {
+    font-size: calc(20px + 4 * (100vw - 390px) / 1920);
+  }
+}
